@@ -1,16 +1,11 @@
 import java.util.Arrays;
-import java.util.Collections;
 
 class Solution {
     public String solution(String s) {
-        char[] array = s.toCharArray();
-        Arrays.sort(array);
-
-        StringBuilder sb = new StringBuilder();
-        for (int i = array.length - 1; i >= 0; i--) {
-            sb.append(array[i]);
-        }
-
+        char[] arr = s.toCharArray();
+        Arrays.sort(arr);
+        
+        StringBuilder sb = new StringBuilder().append(arr).reverse();
         return sb.toString();
     }
 }
